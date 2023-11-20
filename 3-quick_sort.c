@@ -11,7 +11,7 @@
  * Return: Nothing.
  */
 
-void swap(int *val_1, int *val_2)
+void swap_values(int *val_1, int *val_2)
 {
 	int temp = *val_1;
 	*val_1 = *val_2;
@@ -38,14 +38,14 @@ size_t lmt_partition(int *array, size_t low_idx, size_t high_idx, size_t size)
 	{
 		if (array[itr] <= pivot)
 		{
-			swap(&array[index], &array[itr]);
+			swap_values(&array[index], &array[itr]);
 			if (index != itr)
 				print_array(array, size);
 			index++;
 		}
 	}
 
-	swap(&array[index], &array[high_idx]);
+	swap_values(&array[index], &array[high_idx]);
 	if (index != high_idx)
 		print_array(array, size);
 
