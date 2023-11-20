@@ -19,7 +19,6 @@ void swap_values(int *val_1, int *val_2)
 }
 
 
-
 /**
  * bubble_sort - Sorts an array of integers in ascending order using the
  * Bubble sort algorithm.
@@ -55,7 +54,9 @@ void bubble_sort(int *array, size_t size)
 		}
 
 		if (swapped == false)
+		{
+			print_array(array, size);
 			break;
+		}
 	}
-	print_array(array, size);
 }
